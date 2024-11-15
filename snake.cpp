@@ -77,10 +77,10 @@ public:
                 break;
         }
 
-        for(int i = 1; i < snakeLength; i++)
+        for(int i = 1; i < snakeLength; i++){
             if(snakeBody[0].x == snakeBody[i].x && snakeBody[0].y == snakeBody[i].y)
                 return false;
-
+        }
         if(foodPosition.x == snakeBody[0].x && foodPosition.y == snakeBody[0].y)
         {
             snakeBody[snakeLength] = Coordinate(snakeBody[snakeLength-1].x, snakeBody[snakeLength-1].y);
